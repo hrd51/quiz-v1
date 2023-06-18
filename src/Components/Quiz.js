@@ -9,7 +9,7 @@ function Quiz( ){
     const [optionChosen, setOptionChosen] = useState("")
 
     const nextQuestion = () => {
-        if (Questions[currQuestion].answer == optionChosen) {
+        if (Questions[currQuestion].answer === optionChosen) {
             setScore(score + 1);
         }
         setCurrQuestion(currQuestion + 1);
@@ -35,7 +35,7 @@ function Quiz( ){
                 { Questions[currQuestion].optionD }</button>
         </div>
         
-        {currQuestion == Questions.length - 1 ? (
+        {currQuestion === Questions.length - 1 ? (
             <button onClick={finishQuiz}> 結果発表！</button>
         ) : (
         <button onClick={nextQuestion}>次の問題</button>

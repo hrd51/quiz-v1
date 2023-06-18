@@ -1,3 +1,3 @@
-import { createContexst, createContext } from "react";
+import { createContext } from "react";
 
 export const QuizContext = createContext();
